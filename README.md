@@ -1,13 +1,13 @@
-## Authentication Service
-# Overview
+# Authentication Service
+## Overview
 The Authentication Service is a core component of the Risk Assessment Platform. It is responsible for managing user identities, handling user registration and login, and issuing JSON Web Tokens (JWTs) for securing API endpoints across the entire microservice ecosystem.
 
-# Core Responsibilities
+## Core Responsibilities
 User Registration: Allows new users to create an account. Passwords are securely hashed before being stored.
 User Authentication: Validates user credentials (email and password) and issues a JWT access token upon successful login.
 Token Management: Provides mechanisms for creating and decoding JWTs, which will be used by the API Gateway (Kong) and other services to authorize requests.
 
-# Tech Stack
+## Tech Stack
 Language: Python 3.11+
 Framework: FastAPI
 Data Validation: Pydantic
@@ -16,17 +16,17 @@ JWT Handling: python-jose
 Database ORM: SQLAlchemy
 Database: PostgreSQL
 
-# Running the Service
+## Running the Service
 Set up Environment Variables:
 Copy the .env.example file to .env and fill in the required values:bash
 cp.env.example.env
 
 
-# Build and Run with Docker:
+## Build and Run with Docker:
 docker build -t auth-service.
 docker run -p 8000:8000 --env-file.env auth-service
 
-# API Documentation:
+## API Documentation:
 Once running, the interactive API documentation (Swagger UI) will be available at http://localhost:8000/docs.
 
 
